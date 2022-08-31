@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
   get 'feed/index'
   get "home", to:'home#index'
   resources :articles
@@ -6,5 +7,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   get "post", to:"post#index"
-  root "feed#index"
+  root "welcome#index"
 end
